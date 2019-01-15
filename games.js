@@ -8,7 +8,7 @@ var buttonColor = [
 ];
 var started = false;
 var level = 0;
-$(document).keypress(function() {
+$("h1").click(function() {
   if (started == false) {
     nextSequence();
     started = true;
@@ -68,7 +68,7 @@ function checkAnswer(cureentLevel) {
     setTimeout(function(){
       $("body").toggleClass("game-over");
     },200);
-    $("h1").text("Game Over!. Press any key to restart");
+    $("h1").text("Game Over! .Click here to restart");
     started=false;
     level=0;
     gamePattern = [];
